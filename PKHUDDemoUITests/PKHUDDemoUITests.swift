@@ -6,11 +6,10 @@
 //  Copyright © 2017 NSExceptional. All rights reserved.
 //
 
-import XCTest
 import PKHUD
+import XCTest
 
 class PKHUDUITests: XCTestCase {
-
     let app = XCUIApplication()
 
     override func setUp() {
@@ -26,38 +25,38 @@ class PKHUDUITests: XCTestCase {
 
     func testAnimatedSuccessHUD() {
         app.buttons["Animated Success HUD"].tap()
-        self.waitForHudToAppear()
-        self.waitForHudToDisappear()
+        waitForHudToAppear()
+        waitForHudToDisappear()
     }
 
     func testAnimatedErrorHUD() {
         app.buttons["Animated Error HUD"].tap()
-        self.waitForHudToAppear()
-        self.waitForHudToDisappear()
+        waitForHudToAppear()
+        waitForHudToDisappear()
     }
 
     func testAnimatedProgressHUD() {
         app.buttons["Animated Progress HUD"].tap()
-        self.waitForHudToAppear()
-        self.waitForHudToDisappear()
+        waitForHudToAppear()
+        waitForHudToDisappear()
     }
 
     func testAnimatedStatusProgressHUD() {
         app.buttons["Animated Status Progress HUD"].tap()
-        self.waitForHudToAppear()
-        self.waitForHudToDisappear()
+        waitForHudToAppear()
+        waitForHudToDisappear()
     }
 
     func testCustomAnimatedProgressHUD() {
         app.buttons["Custom Animated Progress HUD"].tap()
-        self.waitForHudToAppear()
-        self.waitForHudToDisappear()
+        waitForHudToAppear()
+        waitForHudToDisappear()
     }
 
     func testTextHUD() {
         app.buttons["Text HUD"].tap()
-        self.waitForHudToAppear()
-        self.waitForHudToDisappear()
+        waitForHudToAppear()
+        waitForHudToDisappear()
     }
 
     func waitForCondition(element: XCUIElement, predicate: NSPredicate, timeout: TimeInterval = 3.5) {
@@ -66,10 +65,10 @@ class PKHUDUITests: XCTestCase {
     }
 
     func waitForHudToDisappear() {
-        self.waitForCondition(element: app.otherElements["PKHUD"], predicate: NSPredicate(format: "exists == false"))
+        waitForCondition(element: app.otherElements["PKHUD"], predicate: NSPredicate(format: "exists == false"))
     }
 
     func waitForHudToAppear() {
-            self.waitForCondition(element: app.otherElements["PKHUD"], predicate: NSPredicate(format: "exists == true"), timeout: 1.5)
+        waitForCondition(element: app.otherElements["PKHUD"], predicate: NSPredicate(format: "exists == true"), timeout: 1.5)
     }
 }

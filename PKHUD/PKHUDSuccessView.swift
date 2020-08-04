@@ -11,7 +11,6 @@ import UIKit
 
 /// PKHUDCheckmarkView provides an animated success (checkmark) view.
 open class PKHUDSuccessView: PKHUDSquareBaseView, PKHUDAnimating {
-
     var checkmarkShapeLayer: CAShapeLayer = {
         let checkmarkPath = UIBezierPath()
         checkmarkPath.move(to: CGPoint(x: 4.0, y: 27.0))
@@ -23,18 +22,18 @@ open class PKHUDSuccessView: PKHUDSquareBaseView, PKHUDAnimating {
         layer.path = checkmarkPath.cgPath
 
         #if swift(>=4.2)
-        layer.fillMode    = .forwards
-        layer.lineCap     = .round
-        layer.lineJoin    = .round
+        layer.fillMode = .forwards
+        layer.lineCap = .round
+        layer.lineJoin = .round
         #else
-        layer.fillMode    = kCAFillModeForwards
-        layer.lineCap     = kCALineCapRound
-        layer.lineJoin    = kCALineJoinRound
+        layer.fillMode = kCAFillModeForwards
+        layer.lineCap = kCALineCapRound
+        layer.lineJoin = kCALineJoinRound
         #endif
 
-        layer.fillColor   = nil
+        layer.fillColor = nil
         layer.strokeColor = UIColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.0).cgColor
-        layer.lineWidth   = 6.0
+        layer.lineWidth = 6.0
         return layer
     }()
 

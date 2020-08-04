@@ -6,24 +6,22 @@
 //  Copyright (c) 2016 NSExceptional. All rights reserved.
 //
 
-import UIKit
 import PKHUD
+import UIKit
 
 class DemoViewController: UIViewController {
-    
     let hiddenTextField = UITextField(frame: CGRect.zero)
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.addSubview(hiddenTextField)
         HUD.registerForKeyboardNotifications()
-        
+
         HUD.dimsBackground = false
         HUD.allowsInteraction = false
     }
-    
+
     @IBAction func showHideKeyboard(_ sender: Any) {
         if hiddenTextField.isEditing {
             view.endEditing(true)
@@ -64,20 +62,20 @@ class DemoViewController: UIViewController {
             print("License Obtained.")
         }
     }
-    
+
     deinit {
         HUD.deregisterFromKeyboardNotifications()
     }
 
     /*
-    
-    Please note that the above demonstrates the "porcelain" interface - a more concise and clean way to work with the HUD.
-    If you need more options and flexbility, feel free to use the underlying "plumbing". E.g.:
-    
-    PKHUD.sharedHUD.show()
-    PKHUD.sharedHUD.contentView = PKHUDSuccessView(title: "Success!", subtitle: nil)
-    PKHUD.sharedHUD.hide(afterDelay: 2.0)
-    */
+
+     Please note that the above demonstrates the "porcelain" interface - a more concise and clean way to work with the HUD.
+     If you need more options and flexbility, feel free to use the underlying "plumbing". E.g.:
+
+     PKHUD.sharedHUD.show()
+     PKHUD.sharedHUD.contentView = PKHUDSuccessView(title: "Success!", subtitle: nil)
+     PKHUD.sharedHUD.hide(afterDelay: 2.0)
+     */
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.allButUpsideDown
@@ -87,7 +85,7 @@ class DemoViewController: UIViewController {
         return .lightContent
     }
 
-    func delay(_ delay: Double, closure:@escaping () -> Void) {
+    func delay(_ delay: Double, closure: @escaping () -> Void) {
         DispatchQueue.main.asyncAfter(
             deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
     }

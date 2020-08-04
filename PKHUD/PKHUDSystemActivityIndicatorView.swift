@@ -11,13 +11,12 @@ import UIKit
 
 /// PKHUDSystemActivityIndicatorView provides the system UIActivityIndicatorView as an alternative.
 public final class PKHUDSystemActivityIndicatorView: PKHUDSquareBaseView, PKHUDAnimating {
-
     public init() {
         super.init(frame: PKHUDSquareBaseView.defaultSquareBaseViewFrame)
         commonInit()
     }
 
-    public override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
@@ -27,16 +26,16 @@ public final class PKHUDSystemActivityIndicatorView: PKHUDSquareBaseView, PKHUDA
         commonInit()
     }
 
-    func commonInit () {
+    func commonInit() {
         backgroundColor = UIColor.clear
         alpha = 0.8
 
-        self.addSubview(activityIndicatorView)
+        addSubview(activityIndicatorView)
     }
 
-    public override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
-        activityIndicatorView.center = self.center
+        activityIndicatorView.center = center
     }
 
     let activityIndicatorView: UIActivityIndicatorView = {

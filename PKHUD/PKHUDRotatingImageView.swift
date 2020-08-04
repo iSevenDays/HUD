@@ -7,16 +7,14 @@
 //  Licensed under the MIT license.
 //
 
-import UIKit
 import QuartzCore
+import UIKit
 
 /// PKHUDRotatingImageView provides a content view that rotates the supplied image automatically.
 open class PKHUDRotatingImageView: PKHUDSquareBaseView, PKHUDAnimating {
-
     public func startAnimation() {
         imageView.layer.add(PKHUDAnimation.continuousRotation, forKey: "progressAnimation")
     }
 
-    public func stopAnimation() {
-    }
+    public func stopAnimation() {}
 }

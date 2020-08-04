@@ -11,7 +11,6 @@ import UIKit
 
 /// The PKHUD object controls showing and hiding of the HUD, as well as its contents and touch response behavior.
 open class PKHUD: NSObject {
-
     fileprivate struct Constants {
         static let sharedHUD = PKHUD()
     }
@@ -53,7 +52,7 @@ open class PKHUD: NSObject {
         return Constants.sharedHUD
     }
 
-    public override init () {
+    override public init() {
         super.init()
 
         #if swift(>=4.2)
@@ -63,17 +62,17 @@ open class PKHUD: NSObject {
         #endif
 
         NotificationCenter.default.addObserver(self,
-            selector: #selector(PKHUD.willEnterForeground(_:)),
-            name: notificationName,
-            object: nil)
+                                               selector: #selector(PKHUD.willEnterForeground(_:)),
+                                               name: notificationName,
+                                               object: nil)
         userInteractionOnUnderlyingViewsEnabled = false
-        container.frameView.autoresizingMask = [ .flexibleLeftMargin,
-                                                 .flexibleRightMargin,
-                                                 .flexibleTopMargin,
-                                                 .flexibleBottomMargin ]
+        container.frameView.autoresizingMask = [.flexibleLeftMargin,
+                                                .flexibleRightMargin,
+                                                .flexibleTopMargin,
+                                                .flexibleBottomMargin]
 
-        self.container.isAccessibilityElement = true
-        self.container.accessibilityIdentifier = "PKHUD"
+        container.isAccessibilityElement = true
+        container.accessibilityIdentifier = "PKHUD"
     }
 
     public convenience init(viewToPresentOn view: UIView) {
@@ -124,11 +123,11 @@ open class PKHUD: NSObject {
 
     open func show(onView view: UIView? = nil) {
         let view: UIView = view ?? viewToPresentOn ?? UIApplication.shared.keyWindow!
-        if  !view.subviews.contains(container) {
+        if !view.subviews.contains(container) {
             view.addSubview(container)
             container.frame.origin = CGPoint.zero
             container.frame.size = view.frame.size
-            container.autoresizingMask = [ .flexibleHeight, .flexibleWidth ]
+            container.autoresizingMask = [.flexibleHeight, .flexibleWidth]
             container.isHidden = true
         }
         if dimsBackground {
@@ -175,16 +174,16 @@ open class PKHUD: NSObject {
 
         hideTimer?.invalidate()
         hideTimer = Timer.scheduledTimer(timeInterval: delay,
-                                                           target: self,
-                                                           selector: #selector(PKHUD.performDelayedHide(_:)),
-                                                           userInfo: userInfo,
-                                                           repeats: false)
+                                         target: self,
+                                         selector: #selector(PKHUD.performDelayedHide(_:)),
+                                         userInfo: userInfo,
+                                         repeats: false)
     }
 
     // MARK: Internal
 
     @objc internal func willEnterForeground(_ notification: Notification?) {
-        self.startAnimatingContentView()
+        startAnimatingContentView()
     }
 
     internal func startAnimatingContentView() {
@@ -198,11 +197,11 @@ open class PKHUD: NSObject {
             animatingContentView.stopAnimation?()
         }
     }
-    
+
     internal func registerForKeyboardNotifications() {
         container.registerForKeyboardNotifications()
     }
-    
+
     internal func deregisterFromKeyboardNotifications() {
         container.deregisterFromKeyboardNotifications()
     }

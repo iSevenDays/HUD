@@ -11,7 +11,6 @@ import UIKit
 
 /// Provides the general look and feel of the PKHUD, into which the eventual content is inserted.
 internal class FrameView: UIVisualEffectView {
-
     internal init() {
         super.init(effect: UIBlurEffect(style: .light))
         DispatchQueue.main.async {

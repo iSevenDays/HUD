@@ -28,31 +28,32 @@ public enum HUDContentType {
 }
 
 public final class HUD {
-
     // MARK: Properties
+
     public static var dimsBackground: Bool {
         get { return PKHUD.sharedHUD.dimsBackground }
         set { PKHUD.sharedHUD.dimsBackground = newValue }
     }
 
     public static var allowsInteraction: Bool {
-        get { return PKHUD.sharedHUD.userInteractionOnUnderlyingViewsEnabled  }
+        get { return PKHUD.sharedHUD.userInteractionOnUnderlyingViewsEnabled }
         set { PKHUD.sharedHUD.userInteractionOnUnderlyingViewsEnabled = newValue }
     }
 
     public static var leadingMargin: CGFloat {
-        get { return PKHUD.sharedHUD.leadingMargin  }
+        get { return PKHUD.sharedHUD.leadingMargin }
         set { PKHUD.sharedHUD.leadingMargin = newValue }
     }
 
     public static var trailingMargin: CGFloat {
-        get { return PKHUD.sharedHUD.trailingMargin  }
+        get { return PKHUD.sharedHUD.trailingMargin }
         set { PKHUD.sharedHUD.trailingMargin = newValue }
     }
 
     public static var isVisible: Bool { return PKHUD.sharedHUD.isVisible }
 
     // MARK: Public methods, PKHUD based
+
     public static func show(_ content: HUDContentType, onView view: UIView? = nil) {
         PKHUD.sharedHUD.contentView = contentView(content)
         PKHUD.sharedHUD.show(onView: view)
@@ -71,6 +72,7 @@ public final class HUD {
     }
 
     // MARK: Public methods, HUD based
+
     public static func flash(_ content: HUDContentType, onView view: UIView? = nil) {
         HUD.show(content, onView: view)
         HUD.hide(animated: true, completion: nil)
@@ -80,17 +82,19 @@ public final class HUD {
         HUD.show(content, onView: view)
         HUD.hide(afterDelay: delay, completion: completion)
     }
-    
+
     // MARK: Keyboard Methods
+
     public static func registerForKeyboardNotifications() {
         PKHUD.sharedHUD.registerForKeyboardNotifications()
     }
-    
+
     public static func deregisterFromKeyboardNotifications() {
         PKHUD.sharedHUD.deregisterFromKeyboardNotifications()
     }
 
     // MARK: Private methods
+
     fileprivate static func contentView(_ content: HUDContentType) -> UIView {
         switch content {
         case .success:

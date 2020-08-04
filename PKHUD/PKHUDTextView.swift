@@ -11,7 +11,6 @@ import UIKit
 
 /// PKHUDTextView provides a wide, three line text view, which you can use to display information.
 open class PKHUDTextView: PKHUDWideBaseView {
-
     public init(text: String?) {
         super.init()
         commonInit(text)
@@ -27,7 +26,7 @@ open class PKHUDTextView: PKHUDWideBaseView {
         addSubview(titleLabel)
     }
 
-    open override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
 
         let padding: CGFloat = 10.0

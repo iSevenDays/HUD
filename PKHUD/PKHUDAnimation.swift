@@ -11,7 +11,6 @@ import Foundation
 import QuartzCore
 
 public final class PKHUDAnimation {
-
     public static let discreteRotation: CAAnimation = {
         let animation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
         animation.values = [

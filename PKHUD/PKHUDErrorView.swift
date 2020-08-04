@@ -11,7 +11,6 @@ import UIKit
 
 /// PKHUDErrorView provides an animated error (cross) view.
 open class PKHUDErrorView: PKHUDSquareBaseView, PKHUDAnimating {
-
     var dashOneLayer = PKHUDErrorView.generateDashLayer()
     var dashTwoLayer = PKHUDErrorView.generateDashLayer()
 
@@ -26,18 +25,18 @@ open class PKHUDErrorView: PKHUDSquareBaseView, PKHUDAnimating {
         }()
 
         #if swift(>=4.2)
-        dash.lineCap     = .round
-        dash.lineJoin    = .round
-        dash.fillMode    = .forwards
+        dash.lineCap = .round
+        dash.lineJoin = .round
+        dash.fillMode = .forwards
         #else
-        dash.lineCap     = kCALineCapRound
-        dash.lineJoin    = kCALineJoinRound
-        dash.fillMode    = kCAFillModeForwards
+        dash.lineCap = kCALineCapRound
+        dash.lineJoin = kCALineJoinRound
+        dash.fillMode = kCAFillModeForwards
         #endif
 
-        dash.fillColor   = nil
+        dash.fillColor = nil
         dash.strokeColor = UIColor(red: 0.15, green: 0.15, blue: 0.15, alpha: 1.0).cgColor
-        dash.lineWidth   = 6
+        dash.lineWidth = 6
         return dash
     }
 
