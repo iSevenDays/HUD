@@ -28,21 +28,6 @@ open class HUD: NSObject {
     /// not be shown at all.
     /// This may be used to prevent HUD display for very short tasks.
     /// Defaults to 0 (no grace time).
-    @available(*, deprecated, message: "Will be removed with Swift4 support, use gracePeriod instead")
-    public var graceTime: TimeInterval {
-        get {
-            return gracePeriod
-        }
-        set(newPeriod) {
-            gracePeriod = newPeriod
-        }
-    }
-
-    /// Grace period is the time (in seconds) that the invoked method may be run without
-    /// showing the HUD. If the task finishes before the grace time runs out, the HUD will
-    /// not be shown at all.
-    /// This may be used to prevent HUD display for very short tasks.
-    /// Defaults to 0 (no grace time).
     public var gracePeriod: TimeInterval = 0
     fileprivate var graceTimer: Timer?
 
