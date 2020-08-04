@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F996321D19514FD8001F73CA"
-               BuildableName = "PKHUD.framework"
-               BlueprintName = "PKHUD"
-               ReferencedContainer = "container:PKHUD.xcodeproj">
+               BuildableName = "HUD.framework"
+               BlueprintName = "HUD"
+               ReferencedContainer = "container:HUD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,8 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -46,13 +44,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F996321D19514FD8001F73CA"
-            BuildableName = "PKHUD.framework"
-            BlueprintName = "PKHUD"
-            ReferencedContainer = "container:PKHUD.xcodeproj">
+            BuildableName = "HUD.framework"
+            BlueprintName = "HUD"
+            ReferencedContainer = "container:HUD.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -64,9 +60,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F996321D19514FD8001F73CA"
-            BuildableName = "PKHUD.framework"
-            BlueprintName = "PKHUD"
-            ReferencedContainer = "container:PKHUD.xcodeproj">
+            BuildableName = "HUD.framework"
+            BlueprintName = "HUD"
+            ReferencedContainer = "container:HUD.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

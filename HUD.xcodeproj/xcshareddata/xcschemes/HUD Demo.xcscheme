@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F99631FB19514FAC001F73CA"
-               BuildableName = "PKHUD Demo.app"
-               BlueprintName = "PKHUD Demo"
-               ReferencedContainer = "container:PKHUD.xcodeproj">
+               BuildableName = "HUD Demo.app"
+               BlueprintName = "HUD Demo"
+               ReferencedContainer = "container:HUD.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -27,29 +27,27 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F99631FB19514FAC001F73CA"
+            BuildableName = "HUD Demo.app"
+            BlueprintName = "HUD Demo"
+            ReferencedContainer = "container:HUD.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "12CE19F01E25784C0062D873"
-               BuildableName = "PKHUDDemoUITests.xctest"
-               BlueprintName = "PKHUDDemoUITests"
-               ReferencedContainer = "container:PKHUD.xcodeproj">
+               BuildableName = "HUDDemoUITests.xctest"
+               BlueprintName = "HUDDemoUITests"
+               ReferencedContainer = "container:HUD.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F99631FB19514FAC001F73CA"
-            BuildableName = "PKHUD Demo.app"
-            BlueprintName = "PKHUD Demo"
-            ReferencedContainer = "container:PKHUD.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -66,13 +64,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F99631FB19514FAC001F73CA"
-            BuildableName = "PKHUD Demo.app"
-            BlueprintName = "PKHUD Demo"
-            ReferencedContainer = "container:PKHUD.xcodeproj">
+            BuildableName = "HUD Demo.app"
+            BlueprintName = "HUD Demo"
+            ReferencedContainer = "container:HUD.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -85,9 +81,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F99631FB19514FAC001F73CA"
-            BuildableName = "PKHUD Demo.app"
-            BlueprintName = "PKHUD Demo"
-            ReferencedContainer = "container:PKHUD.xcodeproj">
+            BuildableName = "HUD Demo.app"
+            BlueprintName = "HUD Demo"
+            ReferencedContainer = "container:HUD.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

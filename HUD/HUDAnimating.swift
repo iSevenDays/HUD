@@ -1,6 +1,6 @@
 //
-//  PKHUDAnimatingContentView.swift
-//  PKHUD
+//  HUDAnimatingContentView.swift
+//  HUD
 //
 //  Created by Philip Kluz on 9/27/15.
 //  Copyright (c) 2016 NSExceptional. All rights reserved.
@@ -9,7 +9,7 @@
 
 import UIKit
 
-@objc public protocol PKHUDAnimating {
+@objc public protocol HUDAnimating {
     func startAnimation()
     @objc optional func stopAnimation()
 }

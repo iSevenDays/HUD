@@ -1,6 +1,6 @@
 //
-//  PKHUDAnimation.swift
-//  PKHUD
+//  HUDAnimation.swift
+//  HUD
 //
 //  Created by Piergiuseppe Longo on 06/01/16.
 //  Copyright © 2016 Piergiuseppe Longo, NSExceptional. All rights reserved.
@@ -10,7 +10,7 @@
 import Foundation
 import QuartzCore
 
-public final class PKHUDAnimation {
+public final class HUDAnimation {
     public static let discreteRotation: CAAnimation = {
         let animation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
         animation.values = [

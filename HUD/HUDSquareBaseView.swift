@@ -1,6 +1,6 @@
 //
-//  PKHUDSquareBaseView.swift
-//  PKHUD
+//  HUDSquareBaseView.swift
+//  HUD
 //
 //  Created by Philip Kluz on 6/12/15.
 //  Copyright (c) 2016 NSExceptional. All rights reserved.
@@ -9,8 +9,8 @@
 
 import UIKit
 
-/// PKHUDSquareBaseView provides a square view, which you can subclass and add additional views to.
-open class PKHUDSquareBaseView: UIView {
+/// HUDSquareBaseView provides a square view, which you can subclass and add additional views to.
+open class HUDSquareBaseView: UIView {
     static let defaultSquareBaseViewFrame = CGRect(origin: CGPoint.zero, size: CGSize(width: 156.0, height: 156.0))
 
     override public init(frame: CGRect) {
@@ -22,7 +22,7 @@ open class PKHUDSquareBaseView: UIView {
     }
 
     public init(image: UIImage? = nil, title: String? = nil, subtitle: String? = nil) {
-        super.init(frame: PKHUDSquareBaseView.defaultSquareBaseViewFrame)
+        super.init(frame: HUDSquareBaseView.defaultSquareBaseViewFrame)
         imageView.image = image
         titleLabel.text = title
         subtitleLabel.text = subtitle
@@ -65,7 +65,7 @@ open class PKHUDSquareBaseView: UIView {
     override open func layoutSubviews() {
         super.layoutSubviews()
 
-        let margin: CGFloat = PKHUD.sharedHUD.leadingMargin + PKHUD.sharedHUD.trailingMargin
+        let margin: CGFloat = HUD.shared.leadingMargin + HUD.shared.trailingMargin
         let originX: CGFloat = margin > 0 ? margin : 0.0
         let viewWidth = bounds.size.width - 2 * margin
         let viewHeight = bounds.size.height

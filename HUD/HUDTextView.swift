@@ -1,6 +1,6 @@
 //
-//  PKHUDTextView.swift
-//  PKHUD
+//  HUDTextView.swift
+//  HUD
 //
 //  Created by Philip Kluz on 6/12/15.
 //  Copyright (c) 2016 NSExceptional. All rights reserved.
@@ -9,8 +9,8 @@
 
 import UIKit
 
-/// PKHUDTextView provides a wide, three line text view, which you can use to display information.
-open class PKHUDTextView: PKHUDWideBaseView {
+/// HUDTextView provides a wide, three line text view, which you can use to display information.
+open class HUDTextView: HUDWideBaseView {
     public init(text: String?) {
         super.init()
         commonInit(text)

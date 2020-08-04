@@ -1,6 +1,6 @@
 //
-//  PKHUD.WindowRootViewController.swift
-//  PKHUD
+//  HUD.WindowRootViewController.swift
+//  HUD
 //
 //  Created by Philip Kluz on 6/18/14.
 //  Copyright (c) 2016 NSExceptional. All rights reserved.

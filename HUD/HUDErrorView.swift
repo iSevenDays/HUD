@@ -1,6 +1,6 @@
 //
-//  PKHUDErrorAnimation.swift
-//  PKHUD
+//  HUDErrorAnimation.swift
+//  HUD
 //
 //  Created by Philip Kluz on 9/27/15.
 //  Copyright (c) 2016 NSExceptional. All rights reserved.
@@ -9,10 +9,10 @@
 
 import UIKit
 
-/// PKHUDErrorView provides an animated error (cross) view.
-open class PKHUDErrorView: PKHUDSquareBaseView, PKHUDAnimating {
-    var dashOneLayer = PKHUDErrorView.generateDashLayer()
-    var dashTwoLayer = PKHUDErrorView.generateDashLayer()
+/// HUDErrorView provides an animated error (cross) view.
+open class HUDErrorView: HUDSquareBaseView, HUDAnimating {
+    var dashOneLayer = HUDErrorView.generateDashLayer()
+    var dashTwoLayer = HUDErrorView.generateDashLayer()
 
     class func generateDashLayer() -> CAShapeLayer {
         let dash = CAShapeLayer()

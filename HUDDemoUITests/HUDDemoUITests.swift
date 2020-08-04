@@ -1,22 +1,22 @@
 //
-//  PKHUDUITests.swift
-//  PKHUDUITests
+//  HUDUITests.swift
+//  HUDUITests
 //
 //  Created by Piergiuseppe Longo on 10/01/2017.
 //  Copyright © 2017 NSExceptional. All rights reserved.
 //
 
-import PKHUD
+import HUD
 import XCTest
 
-class PKHUDUITests: XCTestCase {
+class HUDUITests: XCTestCase {
     let app = XCUIApplication()
 
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
         XCUIApplication().launch()
-        XCTAssertFalse(PKHUD.sharedHUD.isVisible)
+        XCTAssertFalse(HUD.shared.isVisible)
     }
 
     override func tearDown() {
@@ -65,10 +65,10 @@ class PKHUDUITests: XCTestCase {
     }
 
     func waitForHudToDisappear() {
-        waitForCondition(element: app.otherElements["PKHUD"], predicate: NSPredicate(format: "exists == false"))
+        waitForCondition(element: app.otherElements["HUD"], predicate: NSPredicate(format: "exists == false"))
     }
 
     func waitForHudToAppear() {
-        waitForCondition(element: app.otherElements["PKHUD"], predicate: NSPredicate(format: "exists == true"), timeout: 1.5)
+        waitForCondition(element: app.otherElements["HUD"], predicate: NSPredicate(format: "exists == true"), timeout: 1.5)
     }
 }

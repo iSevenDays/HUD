@@ -1,6 +1,6 @@
 //
-//  PKHUDSystemActivityIndicatorView.swift
-//  PKHUD
+//  HUDSystemActivityIndicatorView.swift
+//  HUD
 //
 //  Created by Philip Kluz on 6/12/15.
 //  Copyright (c) 2016 NSExceptional. All rights reserved.
@@ -9,10 +9,10 @@
 
 import UIKit
 
-/// PKHUDSystemActivityIndicatorView provides the system UIActivityIndicatorView as an alternative.
-public final class PKHUDSystemActivityIndicatorView: PKHUDSquareBaseView, PKHUDAnimating {
+/// HUDSystemActivityIndicatorView provides the system UIActivityIndicatorView as an alternative.
+public final class HUDSystemActivityIndicatorView: HUDSquareBaseView, HUDAnimating {
     public init() {
-        super.init(frame: PKHUDSquareBaseView.defaultSquareBaseViewFrame)
+        super.init(frame: HUDSquareBaseView.defaultSquareBaseViewFrame)
         commonInit()
     }
 

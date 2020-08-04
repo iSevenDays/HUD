@@ -1,6 +1,6 @@
 //
-//  PKHUDCheckmarkView.swift
-//  PKHUD
+//  HUDCheckmarkView.swift
+//  HUD
 //
 //  Created by Philip Kluz on 9/27/15.
 //  Copyright (c) 2016 NSExceptional. All rights reserved.
@@ -9,8 +9,8 @@
 
 import UIKit
 
-/// PKHUDCheckmarkView provides an animated success (checkmark) view.
-open class PKHUDSuccessView: PKHUDSquareBaseView, PKHUDAnimating {
+/// HUDCheckmarkView provides an animated success (checkmark) view.
+open class HUDSuccessView: HUDSquareBaseView, HUDAnimating {
     var checkmarkShapeLayer: CAShapeLayer = {
         let checkmarkPath = UIBezierPath()
         checkmarkPath.move(to: CGPoint(x: 4.0, y: 27.0))

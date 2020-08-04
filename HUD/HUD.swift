@@ -1,6 +1,6 @@
 //
 //  HUD.swift
-//  PKHUD
+//  HUD
 //
 //  Created by Philip Kluz on 6/13/14.
 //  Copyright (c) 2016 NSExceptional. All rights reserved.
@@ -9,10 +9,10 @@
 
 import UIKit
 
-/// The PKHUD object controls showing and hiding of the HUD, as well as its contents and touch response behavior.
-open class PKHUD: NSObject {
+/// The HUD object controls showing and hiding of the HUD, as well as its contents and touch response behavior.
+open class HUD: NSObject {
     fileprivate struct Constants {
-        static let sharedHUD = PKHUD()
+        static let sharedHUD = HUD()
     }
 
     public var viewToPresentOn: UIView?
@@ -48,7 +48,7 @@ open class PKHUD: NSObject {
 
     // MARK: Public
 
-    open class var sharedHUD: PKHUD {
+    open class var shared: HUD {
         return Constants.sharedHUD
     }
 
@@ -62,7 +62,7 @@ open class PKHUD: NSObject {
         #endif
 
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(PKHUD.willEnterForeground(_:)),
+                                               selector: #selector(HUD.willEnterForeground(_:)),
                                                name: notificationName,
                                                object: nil)
         userInteractionOnUnderlyingViewsEnabled = false
@@ -72,7 +72,7 @@ open class PKHUD: NSObject {
                                                 .flexibleBottomMargin]
 
         container.isAccessibilityElement = true
-        container.accessibilityIdentifier = "PKHUD"
+        container.accessibilityIdentifier = "HUD"
     }
 
     public convenience init(viewToPresentOn view: UIView) {
@@ -136,7 +136,7 @@ open class PKHUD: NSObject {
 
         // If the grace time is set, postpone the HUD display
         if gracePeriod > 0.0 {
-            let timer = Timer(timeInterval: gracePeriod, target: self, selector: #selector(PKHUD.handleGraceTimer(_:)), userInfo: nil, repeats: false)
+            let timer = Timer(timeInterval: gracePeriod, target: self, selector: #selector(HUD.handleGraceTimer(_:)), userInfo: nil, repeats: false)
             #if swift(>=4.2)
             RunLoop.current.add(timer, forMode: .common)
             #else
@@ -175,7 +175,7 @@ open class PKHUD: NSObject {
         hideTimer?.invalidate()
         hideTimer = Timer.scheduledTimer(timeInterval: delay,
                                          target: self,
-                                         selector: #selector(PKHUD.performDelayedHide(_:)),
+                                         selector: #selector(HUD.performDelayedHide(_:)),
                                          userInfo: userInfo,
                                          repeats: false)
     }
@@ -187,13 +187,13 @@ open class PKHUD: NSObject {
     }
 
     internal func startAnimatingContentView() {
-        if let animatingContentView = contentView as? PKHUDAnimating, isVisible {
+        if let animatingContentView = contentView as? HUDAnimating, isVisible {
             animatingContentView.startAnimation()
         }
     }
 
     internal func stopAnimatingContentView() {
-        if let animatingContentView = contentView as? PKHUDAnimating {
+        if let animatingContentView = contentView as? HUDAnimating {
             animatingContentView.stopAnimation?()
         }
     }
