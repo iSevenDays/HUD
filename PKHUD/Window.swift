@@ -128,8 +128,7 @@ internal class ContainerView: UIView {
         }
         if !isHidden {
             if let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber,
-                let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
-            {
+                let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber {
                 animateHUDWith(duration: duration.doubleValue,
                                curve: UIView.AnimationCurve(rawValue: curve.intValue) ?? UIView.AnimationCurve.easeInOut,
                                toLocation: calculateHudCenter())
@@ -144,8 +143,7 @@ internal class ContainerView: UIView {
                 return
             }
             if let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber,
-                let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
-            {
+                let curve = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber {
                 animateHUDWith(duration: duration.doubleValue,
                                curve: UIView.AnimationCurve(rawValue: curve.intValue) ?? UIView.AnimationCurve.easeInOut,
                                toLocation: calculateHudCenter())
